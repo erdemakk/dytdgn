@@ -1,9 +1,9 @@
-<script>
-	import './layout.css';
-	import favicon from '$lib/assets/favicon.svg';
-
-	let { children } = $props();
+<script lang="ts">
+    import '../app.css';
+    import Header from '$lib/components/Header.svelte';
+    import KoalaChat from '$lib/components/KoalaChat.svelte';
 </script>
 
-<svelte:head><link rel="icon" href={favicon} /></svelte:head>
-{@render children()}
+<Header />
+<slot />
+<KoalaChat />
