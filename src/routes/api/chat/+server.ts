@@ -6,6 +6,8 @@ const ai = new GoogleGenAI({
     apiKey: GEMINI_API_KEY
 });
 
+const rateLimit = new Map();
+
 const systemInstruction = `
 Sen Diyetisyen Ayşenur Doğan'ın web sitesindeki profesyonel beslenme asistanı Hera isimli kedisin.
 
@@ -38,8 +40,28 @@ Yanıtların:
 Kullanıcı ciddi sağlık sorunu, yeme bozukluğu, hamilelik, kronik hastalık, ilaç kullanımı veya acil durumdan bahsederse doktora ya da diyetisyene yönlendir.
 `;
 
-export async function POST({ request }) {
+export async function POST({ request, getClientAddress }) {
     try {
+        const ip = getClientAddress();
+        const now = Date.now();
+        const userLimit = rateLimit.get(ip);
+
+        if (userLimit) {
+            if (now - userLimit.startTime < 60000) {
+                if (userLimit.count >= 5) {
+                    return json(
+                        { reply: 'Çok fazla mesaj gönderdiniz. Lütfen bir dakika bekleyip tekrar deneyin. 🐱' },
+                        { status: 429 }
+                    );
+                }
+                userLimit.count += 1;
+            } else {
+                rateLimit.set(ip, { count: 1, startTime: now });
+            }
+        } else {
+            rateLimit.set(ip, { count: 1, startTime: now });
+        }
+
         const body = await request.json();
         const message =
             typeof body?.message === 'string' ? body.message.trim() : '';
