@@ -141,7 +141,7 @@
 </script>
 
 <svelte:head>
-    <title>Dyt. Ayşenur Doğan | Kişiye Özel Beslenme Danışmanlığı</title>
+    <title>Dyt. Ayşenur Doğan</title>
     <meta
             name="description"
             content="Kısıtlama değil denge. Kişiye özel beslenme planı, online diyet takibi ve sürdürülebilir kilo yönetimi."

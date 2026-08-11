@@ -105,10 +105,6 @@
     }
 </script>
 
-<svelte:head>
-    <title>Beslenme Asistanı</title>
-</svelte:head>
-
 {#snippet CatAvatar(size, decorative = false)}
     <div class:cat-avatar-small={size === 'small'} class:cat-avatar-large={size === 'large'} class:cat-avatar-mini={size === 'mini'} class="cat-avatar">
         <span class="avatar-glow"></span>
