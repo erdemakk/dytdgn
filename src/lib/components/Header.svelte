@@ -50,7 +50,7 @@
                 </div>
 
                 <div class="min-w-0">
-                    <div class="display max-w-[170px] truncate text-lg font-bold tracking-tight text-[#242A1F] sm:max-w-none sm:text-xl">
+                    <div class="display whitespace-nowrap text-lg font-bold tracking-tight text-[#242A1F] sm:text-xl">
                         Dyt. Ayşenur Doğan
                     </div>
 
