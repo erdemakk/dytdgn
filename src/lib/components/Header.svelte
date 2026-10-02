@@ -44,21 +44,18 @@
                         <img src="/images/logo.jpeg" alt="Dyt. Ayşenur Doğan" class="h-11 w-11 rounded-full object-cover transition-transform duration-500 group-hover/logo:rotate-6 group-hover/logo:scale-110 sm:h-12 sm:w-12" />
                     </div>
 
-                    <span class="absolute -right-0.5 -bottom-0.5 flex h-3.5 w-3.5 items-center justify-center rounded-full border-2 border-[#F7F1E2] bg-[#E8B84B]">
-                        <span class="absolute inset-0 animate-ping rounded-full bg-[#E8B84B] opacity-60"></span>
-                    </span>
                 </div>
 
                 <div class="min-w-0">
-                    <div class="display whitespace-nowrap text-lg font-bold tracking-tight text-[#242A1F] sm:text-xl">
-                        Dyt. Ayşenur Doğan
+                    <div class="display whitespace-nowrap text-lg font-bold tracking-tight text-[#242A1F] sm:text-xl lg:text-2xl">
+                        Ayşenur Doğan
                     </div>
 
                     <div class="mt-0.5 flex items-center gap-2">
                         <span class="h-px w-4 bg-[#E8B84B] transition-all duration-500 group-hover/logo:w-8"></span>
                         <span class="truncate font-mono text-[9px] font-bold tracking-[0.2em] text-[#4B5D3A] uppercase sm:text-[10px]">
-                            Beslenme Danışmanlığı
-                        </span>
+                Diyetisyen
+            </span>
                     </div>
                 </div>
             </a>
