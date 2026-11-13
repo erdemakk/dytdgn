@@ -27,15 +27,12 @@
         <div
                 class="header-bar group relative flex min-h-[80px] items-center justify-between gap-5 border-2 border-[#242A1F] bg-[#FCFAF2]/95 px-5 backdrop-blur-md transition-all duration-500 sm:px-6 {y > 20 ? 'shadow-[5px_5px_0_0_#242A1F]' : 'shadow-[7px_7px_0_0_#242A1F]'}"
         >
-            <!-- ambient drifting grain texture, quiet -->
             <div class="pointer-events-none absolute inset-0 overflow-hidden opacity-[0.05]" style="background-image: radial-gradient(#242A1F 1px, transparent 1px); background-size: 16px 16px;"></div>
 
-            <!-- perforation strip along the top, ticket motif -->
             <div class="pointer-events-none absolute -top-[1px] left-8 right-8 hidden h-[1px] border-t-2 border-dashed border-[#242A1F]/25 sm:block"></div>
 
             <a href="/" class="group/logo relative z-10 flex min-w-0 shrink-0 items-center gap-3 sm:gap-4">
                 <div class="relative shrink-0">
-                    <!-- rotating dashed "seal" ring behind the logo -->
                     <svg class="absolute -inset-2 h-[calc(100%+16px)] w-[calc(100%+16px)] animate-[spinSlow_14s_linear_infinite] text-[#4B5D3A]/50" viewBox="0 0 100 100" fill="none">
                         <circle cx="50" cy="50" r="47" stroke="currentColor" stroke-width="2" stroke-dasharray="6 7" />
                     </svg>
@@ -91,7 +88,6 @@
 
     {#if isMenuOpen}
         <div transition:slide={{ duration: 350, easing: sineInOut }} class="absolute top-full left-0 w-full px-4 pt-2 lg:hidden">
-            <!-- mobile menu styled like a torn receipt -->
             <div class="receipt relative mx-auto max-w-7xl border-2 border-[#242A1F] bg-[#FCFAF2] p-5 shadow-[6px_6px_0_0_#242A1F]">
                 <p class="font-mono text-[10px] font-bold tracking-[0.2em] text-[#4B5D3A]/70 uppercase">— Menü —</p>
 
@@ -121,7 +117,6 @@
                     </a>
                 </div>
 
-                <!-- torn-edge bottom -->
                 <svg class="absolute -bottom-[9px] left-0 h-[10px] w-full text-[#F7F1E2]" viewBox="0 0 400 10" preserveAspectRatio="none" fill="currentColor">
                     <path d="M0 0 L10 10 L20 0 L30 10 L40 0 L50 10 L60 0 L70 10 L80 0 L90 10 L100 0 L110 10 L120 0 L130 10 L140 0 L150 10 L160 0 L170 10 L180 0 L190 10 L200 0 L210 10 L220 0 L230 10 L240 0 L250 10 L260 0 L270 10 L280 0 L290 10 L300 0 L310 10 L320 0 L330 10 L340 0 L350 10 L360 0 L370 10 L380 0 L390 10 L400 0 Z" />
                 </svg>
